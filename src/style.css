@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 40rem; 
+  box-sizing: border-box; 
+  transition: all 0.3s ease
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;  
+  margin-bottom: 1.5rem
+}
+
+input, button {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem
+}
+
+li {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem
+}
+
+li .buttons {
+  display: flex;
+  gap: 10px; 
+  margin-top: 0.5rem
+}
+
+.update-btn{
+  background-color: #2196F3
+}
+
+.delete-btn {
+  background-color: #f44336
+}
+
+.details-btn {
+  background-color: #2196F3
+}
+
+.update-btn:hover {
+  background-color: #2196F3
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f
+}
+
+.details-btn:hover {
+  background-color: #1976D2
+}
+
+button:focus, .update-btn:focus, .delete-btn:focus, .details-btn:focus {
+  outline: none
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem
+}
+
+p:nth-child(2), p:nth-child(3) {
+  color: #888
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    max-width: 35rem
+  }
+
+  h1 {
+    font-size: 1.75rem
+  }
+
+  input, button {
+    font-size: 0.875rem
+  }
+
+  .update-btn, .delete-btn, .details-btn {
+    font-size: 0.875rem
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%; 
+    max-width: none  
+  }
+
+  h1 {
+    font-size: 1.75rem 
+  }
+
+  input, button {
+    font-size: 0.875rem
+  }
+
+  .update-btn, .delete-btn, .details-btn {
+    font-size: 0.875rem 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%
+  }
+
+  h1 {
+    font-size: 1.5rem 
+  }
+
+  input, button {
+    font-size: 0.75rem 
+  }
+
+  .update-btn, .delete-btn, .details-btn {
+    font-size: 0.75rem 
+  }
+}
+.buttons {
+  display: flex;
+  gap: 10px
+}
+
+.buttons button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Task Details</h1>
+
+    <div id="task-details">
+      <p><strong>Task Name:</strong> <span id="task-name"></span></p>
+      <p><strong>Description:</strong> <span id="task-description"></span></p>
+      <p><strong>Deadline:</strong> <span id="task-deadline"></span></p>
+    </div>
+
+    <button id="back-btn">Back to Task List</button>
+  </div>
+
+  <script>
+    const taskDetails = JSON.parse(localStorage.getItem('taskDetails'));
+
+    document.getElementById('task-name').textContent = taskDetails.taskName;
+    document.getElementById('task-description').textContent = taskDetails.taskDescription;
+    document.getElementById('task-deadline').textContent = taskDetails.taskDeadline;
+
+    document.getElementById('back-btn').addEventListener('click', () => {
+      window.location.href = '/';
+    });
+  </script>
+</body>
+
+</html>
