@@ -2,11 +2,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4
+  background-color: #f4f4f4;
+  padding-top: 20px
 }
 
 .container {
@@ -17,7 +18,8 @@ body {
   width: 100%;
   max-width: 40rem; 
   box-sizing: border-box; 
-  transition: all 0.3s ease
+  transition: all 0.3s ease;
+  margin: 0 auto;
 }
 
 h1 {

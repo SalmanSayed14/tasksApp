@@ -91,26 +91,6 @@ function addTask() {
 
       window.location.href = 'task-details.html';
     });
-
-    function updateRemainingTime() {
-      const deadline = new Date(task.taskDeadline).getTime();
-      const now = new Date().getTime();
-      const timeRemaining = deadline - now;
-
-      if (timeRemaining <= 0) {
-        timeLeftSpan.textContent = 'Time is up!';
-        timeLeftSpan.style.color = 'red';
-      } else {
-        const daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-        timeLeftSpan.textContent = `Time remaining: ${daysRemaining}d ${hoursRemaining}h ${minutesRemaining}m ${secondsRemaining}s`;
-      }
-    }
-
-    setInterval(updateRemainingTime, 1000);
   } else {
     alert('Please enter both a task name and a deadline!');
   }
